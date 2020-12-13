@@ -1,4 +1,4 @@
-##Descripción
+## Descripción
 Este Proyecto ofrece diferentes soluciones al Banco Futuro, intentando responder a sus necesidades actuales tales como:
 1. Creación de nuevos productos y mantenimiento de los actuales.
 2. Falta de flexibilidad en los cambios de la regla de negocio.
@@ -57,9 +57,9 @@ Este componente ofrece los servicios y/o recursos para la gestión de riesgos y 
 - **Body**:
 ```json
 {
-	"risk":[Nombre del riesgo a crear o Actualizar],
-	"impact":[un número entre 1 y 3],
-	"urgency":[un número entre 1 y 4]
+	"risk": "[Nombre del riesgo a crear o Actualizar]",
+	"impact":"[un número entre 1 y 3]",
+	"urgency":"[un número entre 1 y 4]"
 }
 ```
 - **Result**: Http status 200
@@ -102,28 +102,30 @@ Encargado de calcular el valor de un riesgo dato su urgencia e impacto, para eso
 ![Risk Matrix](./arquitecture/matrix.png)
 
 #### risk-analyzer-data
-Este componente gestiona el acceso a base de datos.
+Este componente gestiona el acceso a base de datos. 
+La base de datos creada para este ejercicio fue creada en [Heroku]. En *risk-analyzer\risk-analyzer-app\src\main\resources\config\application.yml* encontrará el acceso a la base de datos
+
 
 
 #### Install
 
-###### Prerequesites
+##### Prerequesites
 To run the project you need the followings:
 1. [Java]
 2. [Spring-Boot]
 
 [Java]: <https://www.java.com/es/download/>
 [Spring-Boot]: <https://spring.io/projects/spring-boot>
+[Heroku]: <https://www.heroku.com/>
 
-
-###### Clone repository
+##### Clone repository
 ```bash
-$ git clone git@192.168.243.3:DTP/adapter-addons-service.git
-$ cd adapter-addons-service
+$ git clone git@github.com:enriquealcocerappgate/risk-analyzer.git
+$ cd risk-analyzer
 ```
 
 
-###### Maven Project Commands
+##### Maven Project Commands
 
 1. __Build the Project Without Test__
 
@@ -169,6 +171,19 @@ $ cd adapter-addons-service
     ```
 
 
-## Start Application in Intellij Develop Environment
+##### Start Application in Intellij Develop Environment
 
 Do right click in file risk-analyzer\risk-analyzer-app\src\main\java\net\appgate\risk\analyzer\app\Application.java and select the option _Run 'Application'_ or _Debug 'Application'_.
+
+## Cuestionamientos
+- **¿Defina porque utilizó (el lenguaje de programación, plataforma y Framework) o el
+equipo de trabajo, según aplique?**
+    - R/ Se utilizó Java con Spring Boot y postgresql. No se utilizo kafka por considerar que es un Over kill para el problema propuesto y no se utilizo dynamoDB, ya que es una base de datos para el acceso rápido  a items individuales, en este caso ser requeria extraer multiples items ( riesgos) para la mostrar los resultados, lo cual representa un alto costo para DynamoDB.
+- **¿Como priorizo los desarrollos / equipo?**
+    - R/ Analizando cada uno de las necesidades y direccionadores
+- **¿Se sintió cómodo con el lenguaje / el equipo seleccionado? ¿Por qué?**
+    - R/ Si, siempre me he sentido comodo con Java
+- **¿Cree que la solución propuesta resuelve el problema del Banco del Futuro?**
+    - R/ Parcialmente, hay que tener claro que algunas de las soluciones requiere un esfuerzo en la inversión de personal y eso conlleva a costos.
+- **¿Describa que le hizo falta conocer para el planteamiento de la solución?**
+    - R/ Al plantear una arquitectura empresarial, se requiere multiples vistas, se que faltan algunas de ellas tales como las vistas de procesos y tecnologias y las diferentes interacciones entre las capas.
