@@ -32,7 +32,7 @@
         <swagger.version>2.9.2</swagger.version>
         <aws-sdk-version>1.11.816</aws-sdk-version>
         <jackson-core.version>2.10.3</jackson-core.version>
-        <jackson-databind.version>2.10.3</jackson-databind.version>
+        <jackson-databind.version>2.10.5.1</jackson-databind.version>
         <jackson-jaxrs-json-provider.version>2.11.0</jackson-jaxrs-json-provider.version>
         <mockito-all-version>1.10.19</mockito-all-version>
         <javax.persistence.version>2.2</javax.persistence.version>
