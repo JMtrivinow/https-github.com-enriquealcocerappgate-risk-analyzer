@@ -36,7 +36,7 @@
         <jackson-jaxrs-json-provider.version>2.11.0</jackson-jaxrs-json-provider.version>
         <mockito-all-version>1.10.19</mockito-all-version>
         <javax.persistence.version>2.2</javax.persistence.version>
-        <postgresql.version>42.2.17</postgresql.version>
+        <postgresql.version>42.4.1</postgresql.version>
         <jackson-datatype-hibernate5.version>2.11.3</jackson-datatype-hibernate5.version>
 
     </properties>
